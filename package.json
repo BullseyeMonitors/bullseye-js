@@ -1,6 +1,6 @@
 {
   "name": "bullseye-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a js library for connecting to the bullseye monitor web socket.",
   "main": "index.js",
   "exports": {
