@@ -14,6 +14,8 @@ class Monitor {
 
     connect() {
         const decryptKey = this.decryptionKey;
+        const notificationHandler = this.notificationHandler
+
         const ws = new WebSocket('ws://api.bullseye.pw/v1/ws/', this.options);
         ws.on('open', function open() {
             ws.send("PING")
@@ -34,7 +36,7 @@ class Monitor {
             for (i = 0; i < buff.length; i++)
                 res += String.fromCharCode(ord[buff.substr(i, 1)] ^ ord[decryptKey.substr(i % decryptKey.length, 1)]);
          
-            this.notificationHandler(JSON.parse(res));
+            notificationHandler(JSON.parse(res));
         });
     }
 }
