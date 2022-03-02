@@ -11,4 +11,5 @@ bullseyeMonitor.connect();
 function notificationCallback(product) {
     console.log(product);
 }
+
 ```
