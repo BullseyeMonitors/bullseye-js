@@ -1,0 +1,21 @@
+{
+  "name": "bullseye-js",
+  "version": "1.0.0",
+  "description": "a js library for connecting to the bullseye monitor web socket.",
+  "main": "index.js",
+  "exports": {
+    "require": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "src/*.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.5.0"
+  }
+}
