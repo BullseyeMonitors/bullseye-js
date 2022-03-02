@@ -5,7 +5,7 @@ a js library for connecting to the bullseye monitor web socket.
 ```js
 const Monitor = require('./bullseye-js');
 
-let bullseyeMonitor = new Monitor("API_KEU", "DECRYPT_KEY", ["amazon"], notificationCallback);
+let bullseyeMonitor = new Monitor("API_KEY", "DECRYPT_KEY", ["amazon"], notificationCallback);
 bullseyeMonitor.connect();
 
 function notificationCallback(product) {
