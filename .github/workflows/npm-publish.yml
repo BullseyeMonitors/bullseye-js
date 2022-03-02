@@ -13,9 +13,21 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-
+  install-dependencies:
+      needs: build
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+      - run: |
+          echo "@INSERT_ORG_NAME:registry=https://npm.pkg.github.com" > .npmrc
+          echo "//npm.pkg.github.com/:_authToken=$GITHUB_PAT" >> .npmrc
+          npm install
   publish-npm:
-    needs: build
+    needs: install-dependencies
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
