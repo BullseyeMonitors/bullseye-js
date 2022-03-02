@@ -1,6 +1,11 @@
 # Bullseye JS
 a js library for connecting to the bullseye monitor web socket.
 
+# Installation
+```
+npm i bullseye-js
+```
+
 # Usage
 ```js
 const Monitor = require('./bullseye-js');
